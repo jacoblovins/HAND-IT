@@ -11,7 +11,7 @@ This gesture recognition application.....
 
 
 ​![HAND-IT](images/googleBooksSearch.png)
-​![HABD-IT](images/googleBooksSaved.png)
+​![HAND-IT](images/googleBooksSaved.png)
 
 
 
