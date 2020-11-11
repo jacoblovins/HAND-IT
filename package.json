@@ -1,0 +1,19 @@
+{
+  "name": "hand-it",
+  "version": "1.0.0",
+  "description": "Easily add hand gesture control to your react apps",
+  "main": "handGestures/HandGest.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacoblovins/HAND-IT.git"
+  },
+  "author": "Jacob Lovins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacoblovins/HAND-IT/issues"
+  },
+  "homepage": "https://github.com/jacoblovins/HAND-IT#readme"
+}
