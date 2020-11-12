@@ -1,27 +1,29 @@
 import React, { useRef, useEffect } from 'react'
 import * as Webcam from 'react-webcam';
 import * as ml5 from 'ml5';
+import poseParameters from './poseParameters'
 import './gesture.css'
 let brain;
 let inputs;
 let pose;
 
-const poseParameters = {
-    pose1: "Up",
-    pose2: "Down",
-    pose3: "Left",
-    pose4: "Right",
-    classifySpeed: 300,
-    webcamWidth: 640,
-    webcamHeight: 480,
-    videoHidden: false
-}
+// const poseParameters = {
+//     pose1: "Up",
+//     pose2: "Down",
+//     pose3: "Left",
+//     pose4: "Right",
+//     classifySpeed: 300,
+//     webcamWidth: 640,
+//     webcamHeight: 480,
+// }
 
 
 
 function HandGest() {
     let working = false;
     const webcamRef = useRef(null);
+    let history = useHistory();
+
 
     const runHandpose = async () => {
         // set up the video parameters to work with the model
@@ -30,14 +32,15 @@ function HandGest() {
         const videoHeight = video.videoHeight;
         video.width = videoWidth;
         video.height = videoHeight;
-        console.log(video.width);
 
         // load the pre-made handpose model and pass the video into it
         // and notify when its loaded
         const handpose = ml5.handpose(video, modelLoaded);
         function modelLoaded() {
             console.log('Model Loaded!');
+            startClass()
         }
+
 
         // anytime the handpose model sees a hand, run the detect funtion
         handpose.on('predict', detect);
@@ -88,12 +91,6 @@ function HandGest() {
         }, poseParameters.classifySpeed);
     }
 
-    // stop reading gestures
-    function stopClass() {
-        working = false
-        clearInterval(inter)
-    }
-
     // send the incoming pose data to the model and
     // classify the data from each pose into gestures
     function classifyPose() {
@@ -109,29 +106,30 @@ function HandGest() {
 
     // do something with the gesture results
     function gotResult(error, results) {
-        if (results[0].confidence > 0.75) {
-            const gesture = results[0].label
-            console.log(gesture)
-
+        if (results) {
+            if (results[0].confidence > 0.90) {
+                const gesture = results[0].label
+                console.log(gesture)
 
 // -----------------------------------------------------------------------------------------------------------------------
 // ADD LOGIC FOR WHAT YOU WANT EACH GESTURE TO DO HERE
 // -----------------------------------------------------------------------------------------------------------------------
 
-            if (gesture === poseParameters.pose1) {
-                window.scrollBy(0, -50);
+                if (gesture === poseParameters.pose1) {
+                    window.scrollBy(0, -50);
 
-            } else if (gesture === poseParameters.pose2) {
-                window.scrollBy(0, 50);
+                } else if (gesture === poseParameters.pose2) {
+                    window.scrollBy(0, 50);
 
-            } else if (gesture === poseParameters.pose3) {
-                // window.scrollBy(0, 50);
+                } else if (gesture === poseParameters.pose3) {
+                    // window.scrollBy(0, 50);
 
-            } else if (gesture === poseParameters.pose4) {
-                // window.scrollBy(0, 50);
+                } else if (gesture === poseParameters.pose4) {
+                    // window.scrollBy(0, 50);
+
+                }
 
             }
-
         }
     }
 // -----------------------------------------------------------------------------------------------------------------------
@@ -141,12 +139,12 @@ function HandGest() {
     return (
         <div>
             <Webcam ref={webcamRef}
+                audio={false}
+                mirrored={true}
                 style={{
                     width: poseParameters.webcamWidth,
                     height: poseParameters.webcamHeight,
                 }} />
-            <button onClick={() => startClass()}>Classify</button>
-            <button onClick={() => stopClass()}>Stop</button>
         </div>
     );
 }
@@ -154,6 +152,6 @@ function HandGest() {
 module.exports = {
     HandGest,
     poseParameters
-} 
-    
+}
+
 
