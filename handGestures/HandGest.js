@@ -149,9 +149,6 @@ function HandGest() {
     );
 }
 
-module.exports = {
-    HandGest,
-    poseParameters
-}
+export default HandGest;
 
 
