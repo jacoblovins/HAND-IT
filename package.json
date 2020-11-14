@@ -1,6 +1,6 @@
 {
   "name": "hand-it",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Easily add hand gesture control to your react apps",
   "main": "handGestures/HandGest.js",
   "scripts": {
