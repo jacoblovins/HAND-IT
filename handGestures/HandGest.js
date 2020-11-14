@@ -2,27 +2,15 @@ import React, { useRef, useEffect } from 'react'
 import * as Webcam from 'react-webcam';
 import * as ml5 from 'ml5';
 import poseParameters from './poseParameters'
+import './gesture.css'
 let brain;
 let inputs;
 let pose;
-
-// const poseParameters = {
-//     pose1: "Up",
-//     pose2: "Down",
-//     pose3: "Left",
-//     pose4: "Right",
-//     classifySpeed: 300,
-//     webcamWidth: 640,
-//     webcamHeight: 480,
-// }
-
 
 
 function HandGest() {
     let working = false;
     const webcamRef = useRef(null);
-    let history = useHistory();
-
 
     const runHandpose = async () => {
         // set up the video parameters to work with the model
@@ -115,15 +103,19 @@ function HandGest() {
 // -----------------------------------------------------------------------------------------------------------------------
 
                 if (gesture === poseParameters.pose1) {
-                    window.scrollBy(0, -50);
+                    // window.scrollBy(0, -50);
+                    poseParameters.pose1Action()
 
                 } else if (gesture === poseParameters.pose2) {
-                    window.scrollBy(0, 50);
+                    poseParameters.pose2Action()
+                    // window.scrollBy(0, 50);
 
                 } else if (gesture === poseParameters.pose3) {
+                    poseParameters.pose3Action()
                     // window.scrollBy(0, 50);
 
                 } else if (gesture === poseParameters.pose4) {
+                    poseParameters.pose4Action()
                     // window.scrollBy(0, 50);
 
                 }
