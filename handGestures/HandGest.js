@@ -2,7 +2,6 @@ import React, { useRef, useEffect } from 'react'
 import * as Webcam from 'react-webcam';
 import * as ml5 from 'ml5';
 import poseParameters from './poseParameters'
-import './gesture.css'
 let brain;
 let inputs;
 let pose;
