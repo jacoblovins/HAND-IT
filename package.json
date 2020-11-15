@@ -15,7 +15,8 @@
     "homepage": "https://github.com/jacoblovins/HAND-IT#readme",
     "author": "Jacob Lovins",
     "scripts": {
-        "build": "webpack"
+        "build": "webpack",
+        "publish:npm": "rm -rf dist && mkdir dist &&  babel src/component -d dist --copy-files"
     },
     "dependencies": {
         "ml5": "^0.6.0",
