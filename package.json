@@ -1,6 +1,6 @@
 {
   "name": "hand-it",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Easily add hand gestures to your react app",
   "main": "./lib/HandGest.js",
   "license": "MIT",
