@@ -7,6 +7,10 @@
   "scripts": {
     "build": "webpack"
   },
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
   "devDependencies": {
     "babel-core": "^6.21.0",
     "babel-loader": "^7.1.4",
@@ -22,8 +26,6 @@
   },
   "dependencies": {
     "ml5": "^0.6.0",
-    "react-webcam": "^5.2.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-webcam": "^5.2.1"
   }
 }
