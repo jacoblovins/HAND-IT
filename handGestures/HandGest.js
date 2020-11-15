@@ -98,34 +98,23 @@ function HandGest() {
                 const gesture = results[0].label
                 console.log(gesture)
 
-// -----------------------------------------------------------------------------------------------------------------------
-// ADD LOGIC FOR WHAT YOU WANT EACH GESTURE TO DO HERE
-// -----------------------------------------------------------------------------------------------------------------------
-
                 if (gesture === poseParameters.pose1) {
-                    // window.scrollBy(0, -50);
                     poseParameters.pose1Action()
 
                 } else if (gesture === poseParameters.pose2) {
                     poseParameters.pose2Action()
-                    // window.scrollBy(0, 50);
-
+                
                 } else if (gesture === poseParameters.pose3) {
                     poseParameters.pose3Action()
-                    // window.scrollBy(0, 50);
-
+                
                 } else if (gesture === poseParameters.pose4) {
                     poseParameters.pose4Action()
-                    // window.scrollBy(0, 50);
-
+                
                 }
 
             }
         }
     }
-// -----------------------------------------------------------------------------------------------------------------------
-// 
-// -----------------------------------------------------------------------------------------------------------------------
 
     return (
         <div>
