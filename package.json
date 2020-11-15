@@ -4,6 +4,11 @@
     "description": "Easily add hand gesture control to your react apps",
     "main": "handGestures/HandGest.js",
     "license": "MIT",
+    "babel": {
+        "presets": [
+            "@babel/preset-react"
+        ]
+    },
     "bugs": {
         "url": "https://github.com/jacoblovins/HAND-IT/issues"
     },
