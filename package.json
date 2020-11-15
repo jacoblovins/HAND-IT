@@ -1,43 +1,29 @@
 {
-    "name": "hand-it",
-    "version": "1.0.9",
-    "description": "Easily add hand gesture control to your react apps",
-    "main": "handGestures/HandGest.js",
-    "license": "MIT",
-    "babel": {
-        "presets": [
-            "@babel/preset-react"
-        ]
-    },
-    "bugs": {
-        "url": "https://github.com/jacoblovins/HAND-IT/issues"
-    },
-    "homepage": "https://github.com/jacoblovins/HAND-IT#readme",
-    "author": "Jacob Lovins",
-    "scripts": {
-        "build": "webpack",
-        "publish:npm": "rm -rf dist && mkdir dist &&  babel src/component -d dist --copy-files"
-    },
-    "dependencies": {
-        "ml5": "^0.6.0",
-        "react-webcam": "^5.2.1"
-    },
-    "peerDependencies": {
-        "prop-types": "^15.6.0",
-        "react": "^16.0.0",
-        "react-dom": "^16.0.0"
-    },
-    "devDependencies": {
-        "babel-core": "^6.21.0",
-        "babel-loader": "^7.1.4",
-        "babel-preset-env": "^1.6.1",
-        "babel-preset-react": "^6.16.0",
-        "babel-preset-stage-0": "^6.24.1",
-        "path": "^0.12.7",
-        "prop-types": "^15.6.0",
-        "react": "^16.0.0",
-        "react-dom": "^16.0.0",
-        "webpack": "^4.5.0",
-        "webpack-cli": "^3.2.1"
-    }
+  "name": "hand-it",
+  "version": "1.0.10",
+  "description": "Easily add hand gestures to your react app",
+  "main": "./lib/HandGest.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "path": "^0.12.7",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^3.2.1"
+  },
+  "dependencies": {
+    "ml5": "^0.6.0",
+    "react-webcam": "^5.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
 }

@@ -2,7 +2,7 @@ var path = require('path');
 
 module.exports = {
     mode: 'production',
-    entry: './handGestures/HandGest.js',
+    entry: './src/HandGest.jsx',
     output: {
         path: path.resolve('lib'),
         filename: 'HandGest.js',
