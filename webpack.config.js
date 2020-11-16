@@ -1,6 +1,6 @@
 module.exports = {
     entry: [
-      './src/HandGest.js'
+      './src/index.js'
     ],
     module: {
       rules: [
