@@ -1,20 +1,44 @@
-var path = require('path');
-
 module.exports = {
-    mode: 'production',
-    entry: './src/HandGest.jsx',
-    output: {
-        path: path.resolve('lib'),
-        filename: 'HandGest.js',
-        libraryTarget: 'commonjs2'
-    },
+    entry: [
+      './src/HandGest.js'
+    ],
     module: {
-        rules: [
-            {
-                test: /\.jsx?$/,
-                exclude: /(node_modules)/,
-                use: 'babel-loader'
-            }
-        ]
+      rules: [
+        {
+          test: /\.(js|jsx)$/,
+          exclude: /node_modules/,
+          use: ['babel-loader']
+        },
+        {
+          test: /(\.css$)/,  
+          use: ['style-loader', 'css-loader']
+        }
+      ]
+    },
+    externals: {
+      react: {
+          root: 'React',
+          commonjs2: 'react',
+          commonjs: 'react',
+          amd: 'react'
+      },
+      'react-dom': {
+          root: 'ReactDOM',
+          commonjs2: 'react-dom',
+          commonjs: 'react-dom',
+          amd: 'react-dom'
+      }
+    },
+    resolve: {
+      extensions: ['*', '.js', '.jsx']
+    },
+    output: {
+      path: __dirname + '/build',
+      publicPath: '/',
+      filename: 'index.js',
+      libraryTarget: 'commonjs2'
+    },
+    devServer: {
+      contentBase: './build'
     }
-}
+  };
