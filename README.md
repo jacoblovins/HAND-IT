@@ -7,13 +7,11 @@
 
 This gesture recognition application.....
 
-## [Click Here to check it out!]()
-
 
 ​![HAND-IT](images/googleBooksSearch.png)
 ​![HAND-IT](images/googleBooksSaved.png)
 
-<a href="./data/model.json" download="model.json">Click to Download</a>
+[Click here to download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/jacoblovins/HAND-IT/tree/master/data)
 
 
 ## Table of Contents

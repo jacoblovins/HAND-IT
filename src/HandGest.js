@@ -43,9 +43,9 @@ function HandGest() {
         // load the trained gesture data from the files and 
         // notify when it's ready
         const modelInfo = {
-            model: '../node_modules/hand-it/data/model.json',
-            metadata: '../node_modules/hand-it/data/model_meta.json',
-            weights: '../node_modules/hand-it/data/model.weights.bin'
+            model: 'data/model.json',
+            metadata: 'data/model_meta.json',
+            weights: 'data/model.weights.bin'
         }
         brain.load(modelInfo, brainReady);
         function brainReady() {
