@@ -128,6 +128,6 @@ function HandGest() {
     );
 }
 
-export default HandGest;
+export {HandGest};
 
 

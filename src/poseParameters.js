@@ -20,4 +20,4 @@ const poseParameters = {
     }
 }
 
-module.exports = poseParameters;
+export {poseParameters};
