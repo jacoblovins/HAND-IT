@@ -13,7 +13,7 @@ This gesture recognition application.....
 ​![HAND-IT](images/googleBooksSearch.png)
 ​![HAND-IT](images/googleBooksSaved.png)
 
-<a href="./data" download>Click to Download</a>
+<a id="raw-url" href="https://raw.githubusercontent.com/jacoblovins/hand-it/master/data">Download FILE</a>
 
 
 ## Table of Contents
