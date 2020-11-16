@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react'
 import * as Webcam from 'react-webcam';
 import * as ml5 from 'ml5';
-import poseParameters from './poseParameters'
+import {poseParameters} from './poseParameters'
 let brain;
 let inputs;
 let pose;
