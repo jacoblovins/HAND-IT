@@ -1,8 +1,8 @@
 const poseParameters = {
-    pose1: "Up",
-    pose2: "Down",
-    pose3: "Left",
-    pose4: "Right",
+    pose1: "Point Up",
+    pose2: "Point Down",
+    pose3: "Point Left",
+    pose4: "Point Right",
     classifySpeed: 300,
     webcamWidth: 640,
     webcamHeight: 480,
