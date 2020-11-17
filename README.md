@@ -8,13 +8,14 @@
 This gesture recognition package lets you easily add hand gesture functionality to your React.js application.
 
 
-​![HAND-IT](images/googleBooksSearch.png)
+​![HAND-IT](handit.gif)
 
 
 
 ## Table of Contents
 
 * [Installation](#installation)
+* [Custom Hand Gestures](#custom-hand-gestures)
 * [Optional Parameters](#optional-parameters)
 * [License](#license)
 * [Questions](#questions)
@@ -36,6 +37,18 @@ Now download the data directory [HERE](https://minhaskamal.github.io/DownGit/#/h
 
 You can now use the ```<HandGest />``` component.
 
+## Custom Hand Gestures
+
+The current pre-trained hand gestures that come with HAND-IT are:
+1. Point Up
+2. Point Down
+3. Point Left
+4. Point Right
+
+If you want to use your own custom hand gestures, our [TRAIN-IT](https://jacoblovins.github.io/TRAIN-IT/) site makes it easy.
+
+Just follow the directions, download the files and drop them into your data directory. Add your custom gesture names to the pose parameters and you're ready to go!
+
 ## Optional parameters:
 
 If you are using custom gestures from [TRAIN-IT](https://jacoblovins.github.io/TRAIN-IT/)
@@ -45,7 +58,7 @@ poseParameters.pose2 = "<your custom gesture name> ";
 poseParameters.pose3 = "<your custom gesture name> ";
 poseParameters.pose4 = "<your custom gesture name>";
 ```
-NOTE: Make sure ```poseParameters.pose1 = "<your custom gesture name>";``` etc... matches exactly what you entered when training the model or your actions will not work.
+NOTE: Make sure ```"<your custom gesture name>"``` matches exactly what you entered when training the model or your actions will not work.
 
 Change the rate at which HAND-IT classifies your hand gestures in milliseconds:
 ```
