@@ -8,7 +8,7 @@
 This gesture recognition package lets you easily add hand gesture functionality to your React.js application.
 
 
-​![HAND-IT](handit.gif)
+​![HAND-IT](handit2.gif)
 
 
 
