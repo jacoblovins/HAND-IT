@@ -1,6 +1,6 @@
 {
   "name": "hand-it",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "Easily add hand gestures to your react app",
   "main": "./build/index.js",
   "license": "MIT",
