@@ -33,8 +33,8 @@ function HandGest() {
 
         // set up my neural network parameters
         let options = {
-            inputs: 42,
-            outputs: 4,
+            inputs: 63,
+            outputs: 11,
             task: 'classification',
             debug: true
         }
@@ -85,6 +85,7 @@ function HandGest() {
             for (let i = 0; i < pose.landmarks.length; i++) {
                 inputs.push(pose.landmarks[i][0]);
                 inputs.push(pose.landmarks[i][1]);
+                inputs.push(pose.landmarks[i][2]);
             }
             brain.classify(inputs, gotResult)
         }
@@ -93,7 +94,7 @@ function HandGest() {
     // do something with the gesture results
     function gotResult(error, results) {
         if (results) {
-            if (results[0].confidence > 0.90) {
+            if (results[0].confidence > 0.85) {
                 const gesture = results[0].label
                 console.log(gesture)
 
