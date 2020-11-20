@@ -94,7 +94,7 @@ function HandGest() {
     // do something with the gesture results
     function gotResult(error, results) {
         if (results) {
-            if (results[0].confidence > 0.85) {
+            if (results[0].confidence > 0.90) {
                 const gesture = results[0].label
                 console.log(gesture)
 
